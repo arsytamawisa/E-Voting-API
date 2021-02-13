@@ -15,22 +15,23 @@ public class Election {
     @Column(length = 50)
     private String elector;
 
-    @ManyToOne
-    @JoinColumn(name = "topic_id")
-    private Topic topicId;
+//    @ManyToOne
+//    @JoinColumn(name = "topic_id")
+//    private Topic topicId;
 
     @ManyToOne
     @JoinColumn(name = "candidate_id")
-    private Candidate candidateId;
+    private Candidate candidate;
 
-    @Column(name = "election_date")
+    @Column(name = "election_date", nullable = false)
     private LocalDateTime electionDate;
+
+
 
     @PrePersist
     public void prePresist() {
         this.electionDate = LocalDateTime.now();
     }
-
 
     public Integer getId() {
         return id;
@@ -48,20 +49,21 @@ public class Election {
         this.elector = elector;
     }
 
-    public Topic getTopicId() {
-        return topicId;
+//    public Topic getTopicId() {
+//        return topicId;
+//    }
+//
+//    public void setTopicId(Topic topicId) {
+//        this.topicId = topicId;
+//    }
+
+
+    public Candidate getCandidate() {
+        return candidate;
     }
 
-    public void setTopicId(Topic topicId) {
-        this.topicId = topicId;
-    }
-
-    public Candidate getCandidateId() {
-        return candidateId;
-    }
-
-    public void setCandidateId(Candidate candidateId) {
-        this.candidateId = candidateId;
+    public void setCandidate(Candidate candidate) {
+        this.candidate = candidate;
     }
 
     public LocalDateTime getElectionDate() {
@@ -70,5 +72,15 @@ public class Election {
 
     public void setElectionDate(LocalDateTime electionDate) {
         this.electionDate = electionDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Election{" +
+                "id=" + id +
+                ", elector='" + elector + '\'' +
+                ", candidateId=" + candidate +
+                ", electionDate=" + electionDate +
+                '}';
     }
 }

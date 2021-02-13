@@ -41,10 +41,10 @@ public class CandidateController {
     @PostMapping
     public Response<CandidateResponse> add(@RequestBody @Valid CandidateRequest request) {
         Candidate candidate          = modelMapper.map(request, Candidate.class);
+
         Topic topic                  = topicService.findById(request.getTopicId());
         candidate.setTopic(topic);
         candidate                    = candidateService.save(candidate);
-
 
         System.out.println(candidate);
         CandidateResponse response   = modelMapper.map(candidate, CandidateResponse.class);

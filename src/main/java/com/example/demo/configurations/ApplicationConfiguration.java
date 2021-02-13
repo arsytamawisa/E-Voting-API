@@ -1,7 +1,5 @@
 package com.example.demo.configurations;
 
-import com.example.demo.entities.Candidate;
-import com.example.demo.models.request.candidate.CandidateRequest;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.context.annotation.Bean;

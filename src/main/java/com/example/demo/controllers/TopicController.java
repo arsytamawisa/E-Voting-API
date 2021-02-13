@@ -1,7 +1,6 @@
 package com.example.demo.controllers;
 
 import com.example.demo.controllers.exceptions.EntityNotFoundException;
-import com.example.demo.entities.Candidate;
 import com.example.demo.entities.Topic;
 import com.example.demo.models.request.topic.TopicRequest;
 import com.example.demo.models.response.Response;
