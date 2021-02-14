@@ -6,7 +6,7 @@ import com.example.demo.model.pagination.PageList;
 import com.example.demo.model.request.topic.TopicRequest;
 import com.example.demo.model.response.Response;
 import com.example.demo.model.response.topic.TopicResponse;
-import com.example.demo.model.response.topic.TopicSearch;
+import com.example.demo.model.request.topic.TopicSearch;
 import com.example.demo.service.TopicService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

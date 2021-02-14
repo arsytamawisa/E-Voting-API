@@ -6,18 +6,32 @@ A formal and organized choice by vote of a person for a political office or othe
 
 ## Features
 
-- Blablabla...
-- Lalalala...
-- Hohoho...
+- Search: search topic by topic name using query parameter
 
+  ![Search](images/feature/search.png)
 
+  
+
+- Pagination: page numbering topic and sorting id by descending
+
+  ![Pagination](images/feature/pagination.png)
+
+  
+
+- Custom Validation Message Response
+
+![Validation 1](images/feature/validation1.png)
+
+![Validation 2](images/feature/validation2.png)
+
+![Validation 3](images/feature/validation3.png)
 
 ## Configuration
 
-- Server Port: 8080
-- MySQL Port: 3306
-- Database Name: enigma_example
-- Context Path: /api
+- Server port        : 8080
+- MySQL port     : 3306
+- Database name : enigma_example
+- Context path     : /api
 
 
 
