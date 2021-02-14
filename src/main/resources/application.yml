@@ -14,4 +14,4 @@ spring:
         properties.hibernate.dialect: org.hibernate.dialect.MySQL57Dialect
     messages.basename: i18n/messages
 springdoc:
-    swagger-ui.path: /api-doc
+    swagger-ui.path: /documentation
