@@ -57,12 +57,11 @@ public class TopicController {
 
 
     @PostMapping
-    public Response<TopicResponse> add(@RequestBody @Valid TopicRequest request) {
+    public Response<Topic> add(@RequestBody @Valid TopicRequest request) {
         System.out.println(request);
         Topic topic              = modelMapper.map(request, Topic.class);
         topic                    = topicService.save(topic);
-        TopicResponse response   = modelMapper.map(topic, TopicResponse.class);
-        return Response.success(response);
+        return Response.success(topic);
     }
 
 

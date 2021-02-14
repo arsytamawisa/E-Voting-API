@@ -2,11 +2,15 @@
 
 A formal and organized choice by vote of a person for a political office or other position.
 
+
+
 ## Features
 
 - Create topic.
 - Election candidate who 
 - Validation
+
+
 
 ## Configuration
 
@@ -15,12 +19,32 @@ A formal and organized choice by vote of a person for a political office or othe
 - DATABASE NAME: enigma_example
 - CONTEXT PATH: /api
 
+
+
 ## API Swagger Documentation
 
 This [URL](localhost:8080/api-doc) can be used to access Swagger UI when the spring-boot application is run locally.
+
+
 
 ## Images Screenshot
 
 Show all topics
 
 ![Find All](images/topic/findAll.png "Find All")
+
+
+
+Find topic by id
+
+![Find Topic](images/topic/findById.png "Find Topic")
+
+
+
+Add topic
+
+![Add Topic](images/topic/add.png "Add Topic")
+
+
+
+![Delete](images/topic/delete.png "Delete")
