@@ -23,7 +23,7 @@ A formal and organized choice by vote of a person for a political office or othe
 
 ## API Swagger Documentation
 
-This [URL](localhost:8080/api-doc) can be used to access Swagger UI when the spring-boot application is run locally.
+This [URL](http://localhost:8080/documentation) can be used to access Swagger UI when the spring-boot application is run locally.
 
 
 
