@@ -2,16 +2,20 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.Candidate;
 import com.example.demo.entity.Election;
+import com.example.demo.entity.Topic;
 import com.example.demo.model.request.election.ElectionRequest;
 import com.example.demo.model.response.Response;
 import com.example.demo.model.response.election.ElectionResponse;
 import com.example.demo.model.response.election.ElectionResult;
 import com.example.demo.service.CandidateService;
 import com.example.demo.service.ElectionService;
+import com.example.demo.service.TopicService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
 import javax.validation.Valid;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +28,9 @@ public class ElectionController {
 
     @Autowired
     protected CandidateService candidateService;
+
+    @Autowired
+    protected TopicService topicService;
 
     @Autowired
     protected ModelMapper modelMapper;
@@ -69,11 +76,23 @@ public class ElectionController {
 
     @PostMapping("/topic/{id}/election")
     public Response<ElectionResponse> add(@PathVariable Integer id, @RequestBody @Valid ElectionRequest request) {
-        Election election           = modelMapper.map(request, Election.class);
-        Candidate candidate         = candidateService.find(request.getCandidateId());
+        Election election = modelMapper.map(request, Election.class);
+        Candidate candidate = candidateService.find(request.getCandidateId());
+        Topic topic = topicService.findById(request.getTopicId());
+
         election.setCandidate(candidate);
-        election                    = electionService.save(election);
-        ElectionResponse response   = modelMapper.map(election, ElectionResponse.class);
+        election.setTopic(topic);
+
+        election = electionService.save(election);
+
+        ElectionResponse response = new ElectionResponse(
+                election.getId(),
+                election.getElector(),
+                election.getCandidate().getId(),
+                election.getTopic().getId(),
+                election.getElectionDate()
+        );
+
         return Response.success(response);
     }
 }

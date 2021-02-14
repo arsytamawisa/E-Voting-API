@@ -73,4 +73,28 @@ Add candidate
 
 Find candidate by id
 
-![Add](images/candidate/findById.png)
+![Find By Id](images/candidate/findById.png)
+
+
+
+Edit candidate by id
+
+![Edit](images/candidate/edit.png)
+
+
+
+Delete candidate by id
+
+![Delete](images/candidate/delete.png)
+
+
+
+Show all election by topic
+
+![Delete](images/election/findAll.png)
+
+
+
+Add election by topic
+
+![Delete](images/election/findAll.png)

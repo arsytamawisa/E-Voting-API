@@ -11,6 +11,17 @@ public class ElectionRequest {
     @NotNull
     private Integer candidateId;
 
+    @NotNull
+    private Integer topicId;
+
+
+    public Integer getTopicId() {
+        return topicId;
+    }
+
+    public void setTopicId(Integer topicId) {
+        this.topicId = topicId;
+    }
 
     public String getElector() {
         return elector;
@@ -33,6 +44,7 @@ public class ElectionRequest {
         return "ElectionRequest{" +
                 "elector='" + elector + '\'' +
                 ", candidateId=" + candidateId +
+                ", topicId=" + topicId +
                 '}';
     }
 }
