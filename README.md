@@ -97,4 +97,10 @@ Show all election by topic
 
 Add election by topic
 
-![Delete](images/election/findAll.png)
+![Delete](images/election/add.png)
+
+
+
+Result all election by topic
+
+![Delete](images/election/result.png)
