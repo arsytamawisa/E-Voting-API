@@ -2,7 +2,16 @@
 
 A formal and organized choice by vote of a person for a political office or other position.
 
+## Configuration
 
+- Server port        : 8080
+- MySQL port     : 3306
+- Database name : enigma_example
+- Context path     : /api
+
+## API Swagger Documentation
+
+This [URL](http://localhost:8080/api/documentation) can be used to access Swagger UI when the spring-boot application is run locally.
 
 ## Features
 
@@ -26,22 +35,9 @@ A formal and organized choice by vote of a person for a political office or othe
 
 ![Validation 3](images/feature/validation3.png)
 
-## Configuration
-
-- Server port        : 8080
-- MySQL port     : 3306
-- Database name : enigma_example
-- Context path     : /api
 
 
-
-## API Swagger Documentation
-
-This [URL](http://localhost:8080/api/documentation) can be used to access Swagger UI when the spring-boot application is run locally.
-
-
-
-## Images Screenshot
+## API Endpoint
 
 Show all topics
 
