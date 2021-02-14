@@ -47,4 +47,12 @@ Add topic
 
 
 
-![Delete](images/topic/delete.png "Delete")
+Delete topic
+
+![Delete](images/topic/delete.png)
+
+
+
+Search topic by name
+
+![Search](images/topic/delete.png)
