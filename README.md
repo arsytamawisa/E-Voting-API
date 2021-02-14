@@ -23,4 +23,4 @@ This [URL](localhost:8080/api-doc) can be used to access Swagger UI when the spr
 
 Show all topics
 
-![All Topics](images\topic\find all.png)
+![All Topics](https://github.com/arsytamawisa/Voting-API/images/topic/find all.png)
