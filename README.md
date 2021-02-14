@@ -14,10 +14,10 @@ A formal and organized choice by vote of a person for a political office or othe
 
 ## Configuration
 
-- SERVER PORT: 8080
-- MYSQL PORT: 3306
-- DATABASE NAME: enigma_example
-- CONTEXT PATH: /api
+- Server Port: 8080
+- MySQL Port: 3306
+- Database Name: enigma_example
+- Context Path: /api
 
 
 
@@ -31,19 +31,19 @@ This [URL](localhost:8080/api-doc) can be used to access Swagger UI when the spr
 
 Show all topics
 
-![Find All](images/topic/findAll.png "Find All")
+![Find All](images/topic/findAll.png)
 
 
 
 Find topic by id
 
-![Find Topic](images/topic/findById.png "Find Topic")
+![Find Topic](images/topic/findById.png)
 
 
 
 Add topic
 
-![Add Topic](images/topic/add.png "Add Topic")
+![Add Topic](images/topic/add.png)
 
 
 
@@ -55,4 +55,4 @@ Delete topic
 
 Search topic by name
 
-![Search](images/topic/delete.png)
+![Search](images/topic/search.png)
