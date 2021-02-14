@@ -56,3 +56,21 @@ Delete topic
 Search topic by name
 
 ![Search](images/topic/search.png)
+
+
+
+Show all candidates by topic
+
+![Find All](images/candidate/findAll.png)
+
+
+
+Add candidate
+
+![Add](images/candidate/add.png)
+
+
+
+Find candidate by id
+
+![Add](images/candidate/findById.png)
