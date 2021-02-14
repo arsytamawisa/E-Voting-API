@@ -15,9 +15,9 @@ public class Election {
     @Column(length = 50)
     private String elector;
 
-//    @ManyToOne
-//    @JoinColumn(name = "topic_id")
-//    private Topic topicId;
+    @ManyToOne
+    @JoinColumn(name = "topic_id")
+    private Topic topic;
 
     @ManyToOne
     @JoinColumn(name = "candidate_id")
@@ -49,14 +49,13 @@ public class Election {
         this.elector = elector;
     }
 
-//    public Topic getTopicId() {
-//        return topicId;
-//    }
-//
-//    public void setTopicId(Topic topicId) {
-//        this.topicId = topicId;
-//    }
+    public Topic getTopic() {
+        return topic;
+    }
 
+    public void setTopic(Topic topic) {
+        this.topic = topic;
+    }
 
     public Candidate getCandidate() {
         return candidate;

@@ -5,18 +5,17 @@ import com.example.demo.entity.Election;
 import com.example.demo.model.request.election.ElectionRequest;
 import com.example.demo.model.response.Response;
 import com.example.demo.model.response.election.ElectionResponse;
-import com.example.demo.model.response.election.ElectionResultResponse;
+import com.example.demo.model.response.election.ElectionResult;
 import com.example.demo.service.CandidateService;
 import com.example.demo.service.ElectionService;
-import com.example.demo.service.TopicService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.List;
 
 
-@RequestMapping("/election/topic/{topicId}")
 @RestController
 public class ElectionController {
 
@@ -27,28 +26,49 @@ public class ElectionController {
     protected CandidateService candidateService;
 
     @Autowired
-    protected TopicService topicService;
-
-    @Autowired
     protected ModelMapper modelMapper;
 
 
-    @GetMapping
-    public Response<List<Election>> findAll() {
-        List<Election> elections = electionService.findAll();
-        return Response.success(elections);
+    @GetMapping("/topic/{id}/election")
+    public Response<List<ElectionResponse>> findAll(@PathVariable Integer id) {
+        List<Election> elections = electionService.findAll(id);
+
+        List<ElectionResponse> response = new ArrayList<>();
+
+        for (Election election : elections) {
+            response.add(new ElectionResponse(
+                    election.getId(),
+                    election.getElector(),
+                    election.getCandidate().getId(),
+                    election.getTopic().getId(),
+                    election.getElectionDate()
+            ));
+        }
+
+        return Response.success(response);
     }
 
 
-    @GetMapping("/result")
-    public Response<List<ElectionResultResponse>> result(@PathVariable Integer topicId) {
-        List<ElectionResultResponse> elections = electionService.result(topicId);
-        return Response.success(elections);
+    @GetMapping("/topic/{id}/result")
+    public Response<List<ElectionResult>> resultVote(@PathVariable Integer id) {
+        List<Election> elections = electionService.result(id);
+
+        List<ElectionResult> response = new ArrayList<>();
+
+        for (Election election : elections) {
+            response.add(new ElectionResult(
+                    election.getId(),
+                    election.getCandidate().getName(),
+                    electionService.countVote(election.getTopic().getId(), election.getCandidate().getId())
+            ));
+        }
+
+        return Response.success(response);
     }
 
 
-    @PostMapping
-    public Response<ElectionResponse> add(@PathVariable Integer topicId, @RequestBody @Valid ElectionRequest request) {
+    @PostMapping("/topic/{id}/election")
+    public Response<ElectionResponse> add(@PathVariable Integer id, @RequestBody @Valid ElectionRequest request) {
         Election election           = modelMapper.map(request, Election.class);
         Candidate candidate         = candidateService.find(request.getCandidateId());
         election.setCandidate(candidate);

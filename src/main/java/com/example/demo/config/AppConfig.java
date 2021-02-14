@@ -12,10 +12,6 @@ public class AppConfig {
     public ModelMapper modelMapper() {
         ModelMapper modelMapper = new ModelMapper();
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-
-//        modelMapper.typeMap(CandidateRequest.class, Candidate.class)
-//                .addMappings(mapper -> mapper.skip(Candidate::setId));
-
         return modelMapper;
     }
 }

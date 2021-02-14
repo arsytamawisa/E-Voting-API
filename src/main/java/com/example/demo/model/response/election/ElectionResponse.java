@@ -6,8 +6,16 @@ public class ElectionResponse {
     private Integer id;
     private String elector;
     private Integer candidateId;
+    private Integer topicId;
     private LocalDateTime electionDate;
 
+    public ElectionResponse(Integer id, String elector, Integer candidateId, Integer topicId, LocalDateTime electionDate) {
+        this.id = id;
+        this.elector = elector;
+        this.candidateId = candidateId;
+        this.topicId = topicId;
+        this.electionDate = electionDate;
+    }
 
     public Integer getId() {
         return id;
@@ -39,6 +47,14 @@ public class ElectionResponse {
 
     public void setElectionDate(LocalDateTime electionDate) {
         this.electionDate = electionDate;
+    }
+
+    public Integer getTopicId() {
+        return topicId;
+    }
+
+    public void setTopicId(Integer topicId) {
+        this.topicId = topicId;
     }
 
     @Override
