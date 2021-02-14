@@ -6,9 +6,9 @@ A formal and organized choice by vote of a person for a political office or othe
 
 ## Features
 
-- Create topic.
-- Election candidate who 
-- Validation
+- Blablabla...
+- Lalalala...
+- Hohoho...
 
 
 
