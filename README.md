@@ -39,6 +39,8 @@ This [URL](http://localhost:8080/api/documentation) can be used to access Swagge
 
 ## API Endpoint
 
+`/topic` 
+
 Show all topics
 
 ![Find All](images/topic/findAll.png)
