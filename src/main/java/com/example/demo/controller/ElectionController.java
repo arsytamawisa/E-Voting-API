@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.controller.exception.EntityNotFoundException;
 import com.example.demo.entity.Candidate;
 import com.example.demo.entity.Election;
 import com.example.demo.entity.Topic;
@@ -77,8 +78,12 @@ public class ElectionController {
     @PostMapping("/topic/{id}/election")
     public Response<ElectionResponse> add(@PathVariable Integer id, @RequestBody @Valid ElectionRequest request) {
         Election election = modelMapper.map(request, Election.class);
+
         Candidate candidate = candidateService.find(request.getCandidateId());
+        if (candidate == null) throw new EntityNotFoundException();
+
         Topic topic = topicService.findById(request.getTopicId());
+        if (topic == null) throw new EntityNotFoundException();
 
         election.setCandidate(candidate);
         election.setTopic(topic);
