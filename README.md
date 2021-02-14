@@ -89,18 +89,18 @@ Delete candidate by id
 
 
 
-Show all election by topic
+Show all elections by topic
 
 ![Delete](images/election/findAll.png)
 
 
 
-Add election by topic
+Election candidate by topic
 
 ![Delete](images/election/add.png)
 
 
 
-Result all election by topic
+Results of all elections by topic 
 
 ![Delete](images/election/result.png)
