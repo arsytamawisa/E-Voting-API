@@ -31,9 +31,9 @@ This [URL](http://localhost:8080/api/documentation) can be used to access Swagge
 
   
 
-- `Custom Validation Message Response`
+- `Custom Validation`
 
-  Handle error message when hit endpoint or send wrong request.
+  Handle error message response when hit endpoint or send wrong request.
 
 ![Validation 1](images/feature/validation1.png)
 
