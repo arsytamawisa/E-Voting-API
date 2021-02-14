@@ -2,16 +2,25 @@
 
 A formal and organized choice by vote of a person for a political office or other position.
 
+<br>
+
 ## Configuration
 
 - Server port        : 8080
+
 - MySQL port     : 3306
+
 - Database name : enigma_example
+
 - Context path     : /api
+
+  <br>
 
 ## API Swagger Documentation
 
 This [URL](http://localhost:8080/api/documentation) can be used to access Swagger UI when the spring-boot application is run locally.
+
+<br>
 
 ## Features
 
