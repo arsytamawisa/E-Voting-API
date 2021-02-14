@@ -15,19 +15,25 @@ This [URL](http://localhost:8080/api/documentation) can be used to access Swagge
 
 ## Features
 
-- Search: search topic by topic name using query parameter
+- `Search`
+
+  Search topic by topic name using query parameter.
 
   ![Search](images/feature/search.png)
 
   
 
-- Pagination: page numbering topic and sorting id by descending
+- `Pagination`
+
+  Page numbering topic and sorting id by descending.
 
   ![Pagination](images/feature/pagination.png)
 
   
 
-- Custom Validation Message Response
+- `Custom Validation Message Response`
+
+  Handle error message when hit endpoint or send wrong request.
 
 ![Validation 1](images/feature/validation1.png)
 
@@ -38,8 +44,6 @@ This [URL](http://localhost:8080/api/documentation) can be used to access Swagge
 
 
 ## API Endpoint
-
-`/topic` 
 
 Show all topics
 
